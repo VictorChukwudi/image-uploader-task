@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 dotenv.config();
 const connectDB = async () => {
   try {
-    const mongoURI=process.env.dbURI_LOCAL
+    const mongoURI=process.env.dbURI
     if(!mongoURI){
         throw new Error("mongo url not defined")
     }
