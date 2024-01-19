@@ -23,7 +23,7 @@ app.post("/upload", upload.single("image"),async(req: Request,res: Response)=>{
             throw new Error("No image uploaded")
         }
         
-        const mimetypes: string[]=["image/jpeg", "image/png"]
+        const mimetypes: string[]=["image/jpeg", "image/png", "image/gif"]
         if(!mimetypes.includes(req.file!.mimetype)){
             res.status(400)
             throw new Error("Invalid image selected") 
