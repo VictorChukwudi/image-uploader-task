@@ -1,15 +1,14 @@
 # Image Uploader
 This is a simple image uploader API. It uses cloudinary as a storage for the images and saves the secure and unique image URL to mongoDB database.
+
 ## Table of Contents
-- [Image Uploader](#image-uploader)
-  - [Table of Contents](#table-of-contents)
   - [General Info](#general-info)
   - [Documentation](#documentation)
   - [Prerequisites](#prerequisites)
   - [Modules and Dependencies](#modules-and-dependencies)
   - [Setup](#setup)
   - [Usage](#usage)
-    - [Deployed](#deployed)
+   
 
 ## General Info
 
