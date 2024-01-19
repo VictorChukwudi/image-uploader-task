@@ -1,4 +1,5 @@
 import express, {Request, Response} from "express"
+import mongoose from "mongoose"
 import dotenv from "dotenv";
 import connectDB from "./config/db";
 import { upload } from "./config/multer";
@@ -51,6 +52,12 @@ app.post("/upload", upload.single("image"),async(req: Request,res: Response)=>{
 app.get("/get_image/:id", async(req: Request,res: Response)=>{
     try {
         const id=req.params.id
+        const isValid=mongoose.Types.ObjectId.isValid(id)
+
+        if(!isValid){
+            res.status(400)
+            throw new Error("Invalid image id passed as request parameter")
+        }
         const findImage= await Image.findById(id)
         if(!findImage){
             res.status(404)
