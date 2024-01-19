@@ -1,6 +1,5 @@
 import express, {Request, Response} from "express"
 import dotenv from "dotenv";
-import logger from "morgan";
 import connectDB from "./config/db";
 import { upload } from "./config/multer";
 import { imageUpload } from "./config/cloudinary";
@@ -14,7 +13,6 @@ connectDB()
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(logger("dev"))
 
 app.post("/upload", upload.single("image"),async(req: Request,res: Response)=>{      
     try {
