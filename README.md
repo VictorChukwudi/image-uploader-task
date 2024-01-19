@@ -16,7 +16,7 @@ This is a simple image uploader API. It uses cloudinary as a storage for the ima
 A simple API built with expressjs, mongoDB and cloudinary to save, store and retrieve images.
 
 ## Documentation
-Click [this]() link to view a detailed documentation of this resource.
+Click [this](https://documenter.getpostman.com/view/19721625/2s9YsT4TLg) link to view a detailed documentation of this resource.
 
 ## Prerequisites
 

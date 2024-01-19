@@ -29,7 +29,6 @@ app.post("/upload", upload.single("image"),async(req: Request,res: Response)=>{
             throw new Error("Invalid image selected") 
         }else{
             const uploader= await imageUpload(req.file!.path)
-            console.log(uploader);
             const saveImageUrl= await new Image({
                 url:uploader.url
             }).save()
